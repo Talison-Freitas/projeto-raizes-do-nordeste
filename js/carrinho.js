@@ -104,7 +104,7 @@ document.getElementById("form-cupom").addEventListener("submit", function (e) {
   montarCarrinho();
 });
 
-document.getElementById("finalizar").addEventListener("click", function () {
+document.getElementById("finalizar").addEventListener("click", function (e) {
   const carrinho = lerStorage("carrinho", []);
   const subtotal = calcularSubtotal(carrinho);
   const desconto = calcularDesconto(subtotal);
@@ -119,6 +119,11 @@ document.getElementById("finalizar").addEventListener("click", function () {
     cupom: cupom ? cupom.codigo : null,
     retirada: retirada
   });
+
+  if (!usuarioLogado()) {
+    e.preventDefault();
+    window.location.href = "login.html?voltar=pagamento.html";
+  }
 });
 
 if (cupom) {

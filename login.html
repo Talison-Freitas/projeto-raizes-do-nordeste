@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+  </header>
+
+  <main class="conteudo estreito">
+    <div class="abas">
+      <button type="button" id="aba-login" class="ativa">Entrar</button>
+      <button type="button" id="aba-cadastro">Criar conta</button>
+    </div>
+
+    <form id="form-login" novalidate>
+      <h1>Entrar</h1>
+      <label for="login-email">E-mail</label>
+      <input type="email" id="login-email" autocomplete="email">
+
+      <label for="login-senha">Senha</label>
+      <input type="password" id="login-senha" autocomplete="current-password">
+
+      <p class="mensagem erro" id="msg-login" role="alert"></p>
+      <button class="botao" type="submit">Entrar</button>
+    </form>
+
+    <form id="form-cadastro" hidden novalidate>
+      <h1>Criar conta</h1>
+
+      <label for="cad-nome">Nome completo</label>
+      <input type="text" id="cad-nome" autocomplete="name">
+
+      <label for="cad-email">E-mail</label>
+      <input type="email" id="cad-email" autocomplete="email">
+
+      <label for="cad-nascimento">Data de nascimento</label>
+      <input type="date" id="cad-nascimento">
+
+      <label for="cad-senha">Senha (mínimo 6 caracteres)</label>
+      <input type="password" id="cad-senha" autocomplete="new-password">
+
+      <fieldset>
+        <legend>Seus dados e sua privacidade</legend>
+        <p class="aviso">
+          Coletamos nome, e-mail e data de nascimento para criar sua conta, registrar seus pedidos e controlar seus pontos de fidelidade.
+          Você pode consultar, corrigir ou excluir esses dados quando quiser na
+          <a href="privacidade.html">Política de Privacidade</a>.
+        </p>
+
+        <label class="opcao">
+          <input type="checkbox" id="cons-termos">
+          <span>Li e concordo com a Política de Privacidade e autorizo o uso dos meus dados para realizar pedidos e participar do programa de fidelidade. <strong>(obrigatório)</strong></span>
+        </label>
+
+        <label class="opcao">
+          <input type="checkbox" id="cons-marketing">
+          <span>Quero receber promoções e campanhas. <em>(opcional)</em></span>
+        </label>
+
+        <label class="opcao">
+          <input type="checkbox" id="cons-perfil">
+          <span>Autorizo usar minha idade e frequência de compras para receber ofertas segmentadas. <em>(opcional)</em></span>
+        </label>
+
+        <p class="aviso">Os itens opcionais não afetam o uso do app e podem ser revogados a qualquer momento.</p>
+      </fieldset>
+
+      <p class="mensagem erro" id="msg-cadastro" role="alert"></p>
+      <button class="botao" type="submit">Criar conta</button>
+    </form>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

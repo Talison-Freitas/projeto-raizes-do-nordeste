@@ -48,13 +48,84 @@ button {
 
 .topo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 
 .topo .marca {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-right: auto;
+}
+
+.area-usuario {
+  font-size: 0.9rem;
+}
+
+.sair {
+  background: none;
+  border: 0;
+  color: #fff;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.banner-lgpd {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--cafe);
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.banner-lgpd p {
+  margin: 0 0 0.75rem;
+}
+
+.banner-lgpd a {
+  color: var(--milho);
+}
+
+.botoes-lgpd {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botoes-lgpd button {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.botoes-lgpd .aceitar {
+  background: var(--milho);
+  border-color: var(--milho);
+  color: var(--cafe);
+}
+
+@media (min-width: 768px) {
+  .banner-lgpd {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .banner-lgpd p {
+    margin: 0;
+  }
+
+  .botoes-lgpd button {
+    white-space: nowrap;
+    padding: 0.6rem 1rem;
+  }
 }
 
 .conteudo {

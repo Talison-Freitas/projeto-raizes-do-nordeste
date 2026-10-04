@@ -1,0 +1,90 @@
+.estreito {
+  max-width: 480px;
+}
+
+.abas {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--borda);
+}
+
+.abas button {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 0.75rem;
+  color: var(--cinza);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.abas button.ativa {
+  color: var(--terracota);
+  border-bottom-color: var(--terracota);
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font: inherit;
+  background: #fff;
+}
+
+fieldset {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.4rem;
+}
+
+.aviso {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  margin: 0.5rem 0;
+}
+
+form label.opcao {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  margin: 0.6rem 0;
+}
+
+.opcao input {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+form .botao {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.mensagem {
+  margin: 0.75rem 0 0;
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.mensagem.erro {
+  color: var(--terracota);
+}
