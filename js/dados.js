@@ -21,3 +21,9 @@ const produtos = [
   { id: 13, nome: "Café coado", descricao: "Café passado na hora, 200 ml.", preco: 5, categoria: "Bebidas", unidades: [1, 2, 3, 4] },
   { id: 14, nome: "Café da manhã completo", descricao: "Cuscuz, ovo, tapioca, café e suco.", preco: 29.9, categoria: "Combos", unidades: [1, 2] }
 ];
+
+const promocoes = [
+  { codigo: "BEMVINDO10", descricao: "10% de desconto no pedido", tipo: "percentual", valor: 10 },
+  { codigo: "SAOJOAO15", descricao: "15% de desconto na temporada junina", tipo: "percentual", valor: 15 },
+  { codigo: "CAFE5", descricao: "R$ 5,00 de desconto", tipo: "fixo", valor: 5 }
+];

@@ -1,0 +1,123 @@
+.unidade-info {
+  margin: 0 0 1rem;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.itens {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.item span {
+  color: var(--palma);
+  font-weight: bold;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantidade span {
+  min-width: 1.5rem;
+  text-align: center;
+  color: var(--cafe);
+}
+
+.quantidade button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--terracota);
+  background: none;
+  color: var(--terracota);
+  border-radius: 4px;
+}
+
+.quantidade .remover {
+  width: auto;
+  padding: 0 0.5rem;
+  border: 0;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
+.bloco {
+  margin-bottom: 1.5rem;
+}
+
+.bloco h2 {
+  font-size: 1.05rem;
+}
+
+.bloco label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.cupom {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cupom input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.mensagem {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+.mensagem.ok {
+  color: var(--palma);
+}
+
+.mensagem.erro {
+  color: var(--terracota);
+}
+
+.resumo p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0.4rem;
+}
+
+.resumo .total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 1px solid var(--borda);
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resumo .botao {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .resumo {
+    max-width: 360px;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrinho - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/carrinho.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+    <a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+  </header>
+
+  <main class="conteudo">
+    <h1>Seu pedido</h1>
+    <p class="unidade-info" id="unidade-info"></p>
+
+    <p class="vazio" id="vazio" hidden>
+      Seu carrinho está vazio. <a href="cardapio.html">Voltar ao cardápio</a>
+    </p>
+
+    <div id="area-carrinho">
+      <ul class="itens" id="itens"></ul>
+
+      <section class="bloco">
+        <h2>Retirada</h2>
+        <label><input type="radio" name="retirada" value="Balcão" checked> Retirar no balcão</label>
+        <label><input type="radio" name="retirada" value="Pick-up rápido"> Pick-up rápido (pedido separado na prateleira)</label>
+      </section>
+
+      <section class="bloco">
+        <h2>Cupom de desconto</h2>
+        <form class="cupom" id="form-cupom">
+          <input type="text" id="codigo-cupom" placeholder="Digite o código" aria-label="Código do cupom">
+          <button class="botao" type="submit">Aplicar</button>
+        </form>
+        <p class="mensagem" id="msg-cupom"></p>
+      </section>
+
+      <section class="bloco resumo">
+        <p>Subtotal <span id="subtotal"></span></p>
+        <p>Desconto <span id="desconto"></span></p>
+        <p class="total">Total <span id="total"></span></p>
+        <a class="botao" href="pagamento.html" id="finalizar">Finalizar pedido</a>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/carrinho.js"></script>
+</body>
+</html>
