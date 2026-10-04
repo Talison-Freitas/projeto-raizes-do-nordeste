@@ -46,6 +46,12 @@ button {
   text-decoration: none;
 }
 
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .topo .marca {
   font-size: 1.2rem;
   font-weight: bold;

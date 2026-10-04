@@ -1,0 +1,81 @@
+.unidade-atual {
+  margin-bottom: 1rem;
+}
+
+.unidade-atual p {
+  margin: 0 0 0.25rem;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.categorias {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.categorias button {
+  white-space: nowrap;
+  background: none;
+  border: 1px solid var(--terracota);
+  color: var(--terracota);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+}
+
+.categorias button.ativa {
+  background: var(--terracota);
+  color: #fff;
+}
+
+.lista-produtos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.produto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.produto h2 {
+  font-size: 1.05rem;
+}
+
+.produto p {
+  margin: 0 0 0.25rem;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.preco {
+  font-weight: bold;
+  color: var(--palma);
+}
+
+.selo {
+  background: var(--milho);
+  color: var(--cafe);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.produto .botao {
+  flex-shrink: 0;
+  padding: 0.6rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .produto .botao {
+    min-width: 120px;
+  }
+}

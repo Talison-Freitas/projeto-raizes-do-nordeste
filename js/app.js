@@ -23,3 +23,28 @@ function escolherUnidade(id) {
   }
   salvarStorage("unidadeId", id);
 }
+
+function adicionarAoCarrinho(produtoId) {
+  const carrinho = lerStorage("carrinho", []);
+  const item = carrinho.find(function (i) { return i.id === produtoId; });
+  if (item) {
+    item.qtd++;
+  } else {
+    carrinho.push({ id: produtoId, qtd: 1 });
+  }
+  salvarStorage("carrinho", carrinho);
+  atualizarContador();
+}
+
+function totalItensCarrinho() {
+  return lerStorage("carrinho", []).reduce(function (soma, i) { return soma + i.qtd; }, 0);
+}
+
+function atualizarContador() {
+  const contador = document.getElementById("contador");
+  if (contador) {
+    contador.textContent = totalItensCarrinho();
+  }
+}
+
+atualizarContador();

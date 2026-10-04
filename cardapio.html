@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cardapio.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+    <a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+  </header>
+
+  <main class="conteudo">
+    <section class="unidade-atual">
+      <h1 id="nome-unidade"></h1>
+      <p id="info-unidade"></p>
+      <a href="index.html">Trocar unidade</a>
+    </section>
+
+    <nav class="categorias" id="categorias" aria-label="Categorias"></nav>
+
+    <ul class="lista-produtos" id="lista-produtos"></ul>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cardapio.js"></script>
+</body>
+</html>
