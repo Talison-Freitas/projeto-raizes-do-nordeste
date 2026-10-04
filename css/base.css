@@ -1,0 +1,86 @@
+:root {
+  --terracota: #b5472a;
+  --terracota-escuro: #8f3820;
+  --milho: #e8b230;
+  --palma: #3e6b3a;
+  --creme: #fbf3e4;
+  --cafe: #3b2a20;
+  --cinza: #7a6a5d;
+  --borda: #e3d5bd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--creme);
+  color: var(--cafe);
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+}
+
+a {
+  color: var(--terracota);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.topo {
+  background: var(--terracota);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-bottom: 4px solid var(--milho);
+}
+
+.topo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.topo .marca {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.conteudo {
+  padding: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--terracota);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.botao:hover {
+  background: var(--terracota-escuro);
+}
+
+.botao:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--milho);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .conteudo {
+    padding: 2rem;
+  }
+}

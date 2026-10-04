@@ -1,0 +1,45 @@
+.intro {
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--cinza);
+}
+
+.lista-unidades {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.unidade {
+  border-bottom: 1px solid var(--borda);
+  padding: 1rem 0;
+}
+
+.unidade h2 {
+  font-size: 1.1rem;
+}
+
+.unidade p {
+  margin: 0 0 0.75rem;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.unidade .botao {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .lista-unidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+  }
+
+  .unidade .botao {
+    width: auto;
+  }
+}
