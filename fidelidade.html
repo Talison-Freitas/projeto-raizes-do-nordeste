@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fidelidade - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/fidelidade.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+    <a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+  </header>
+
+  <main class="conteudo estreito">
+    <h1>Programa de fidelidade</h1>
+
+    <section class="saldo">
+      <p>Seu saldo</p>
+      <strong><span id="saldo">0</span> pontos</strong>
+    </section>
+
+    <section class="bloco">
+      <h2>Como funciona</h2>
+      <ul>
+        <li>Cada R$ 1,00 pago em um pedido aprovado vale 1 ponto.</li>
+        <li>100 pontos viram R$ 10,00 de desconto. Você escolhe usar os pontos no carrinho, antes de finalizar o pedido.</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <h2>Promoções e campanhas</h2>
+      <ul class="campanhas" id="campanhas-gerais"></ul>
+    </section>
+
+    <section class="bloco">
+      <h2>Ofertas para você</h2>
+      <p class="aviso" id="aviso-perfil"></p>
+      <ul class="campanhas" id="campanhas-perfil"></ul>
+    </section>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/fidelidade.js"></script>
+</body>
+</html>

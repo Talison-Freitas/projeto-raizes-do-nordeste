@@ -47,6 +47,19 @@ function atualizarContador() {
   }
 }
 
+function calcularIdade(nascimento) {
+  const data = new Date(nascimento);
+  const hoje = new Date();
+  let idade = hoje.getFullYear() - data.getFullYear();
+  const jaFezAniversario =
+    hoje.getMonth() > data.getMonth() ||
+    (hoje.getMonth() === data.getMonth() && hoje.getDate() >= data.getDate());
+  if (!jaFezAniversario) {
+    idade--;
+  }
+  return idade;
+}
+
 function usuarioLogado() {
   const email = lerStorage("usuarioLogado", null);
   if (!email) {
@@ -71,7 +84,7 @@ function montarAreaUsuario() {
 
   if (usuario) {
     area.innerHTML =
-      '<a href="acompanhamento.html">Meus pedidos</a> · <span>Olá, ' + usuario.nome.split(" ")[0] +
+      '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a> · <span>Olá, ' + usuario.nome.split(" ")[0] +
       '</span> <button class="sair" type="button">Sair</button>';
     area.querySelector("button").addEventListener("click", sair);
   } else {

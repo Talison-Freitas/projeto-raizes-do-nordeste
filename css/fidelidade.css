@@ -1,0 +1,60 @@
+.estreito {
+  max-width: 560px;
+}
+
+.saldo {
+  background: var(--palma);
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.saldo p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.saldo strong {
+  font-size: 1.8rem;
+}
+
+.bloco {
+  margin-bottom: 1.5rem;
+}
+
+.bloco h2 {
+  font-size: 1.05rem;
+}
+
+.bloco ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.campanhas {
+  list-style: none;
+  padding: 0;
+}
+
+.campanhas li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.campanhas h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.campanhas p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
+.aviso {
+  font-size: 0.9rem;
+  color: var(--cinza);
+  margin: 0 0 0.5rem;
+}

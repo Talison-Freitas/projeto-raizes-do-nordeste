@@ -10,6 +10,7 @@ const listaItens = document.getElementById("itens");
 const areaCarrinho = document.getElementById("area-carrinho");
 const msgCupom = document.getElementById("msg-cupom");
 let cupom = lerStorage("cupom", null);
+let usarPontos = false;
 
 function calcularSubtotal(carrinho) {
   let subtotal = 0;
@@ -21,13 +22,34 @@ function calcularSubtotal(carrinho) {
 }
 
 function calcularDesconto(subtotal) {
-  if (!cupom) {
-    return 0;
+  let desconto = 0;
+  if (cupom && cupom.tipo === "percentual") {
+    desconto = subtotal * cupom.valor / 100;
+  } else if (cupom) {
+    desconto = cupom.valor;
   }
-  if (cupom.tipo === "percentual") {
-    return subtotal * cupom.valor / 100;
+  if (usarPontos) {
+    desconto += regraFidelidade.descontoResgate;
   }
-  return Math.min(cupom.valor, subtotal);
+  return Math.min(desconto, subtotal);
+}
+
+function montarBlocoPontos() {
+  const cliente = usuarioLogado();
+  const bloco = document.getElementById("bloco-pontos");
+  bloco.hidden = !cliente;
+  if (!cliente) {
+    usarPontos = false;
+    return;
+  }
+  const podeUsar = cliente.pontos >= regraFidelidade.pontosResgate;
+  if (!podeUsar) {
+    usarPontos = false;
+  }
+  const caixa = document.getElementById("usar-pontos");
+  caixa.disabled = !podeUsar;
+  caixa.checked = usarPontos;
+  document.getElementById("saldo-pontos").textContent = cliente.pontos;
 }
 
 function montarCarrinho() {
@@ -56,6 +78,7 @@ function montarCarrinho() {
     listaItens.appendChild(li);
   });
 
+  montarBlocoPontos();
   const subtotal = calcularSubtotal(carrinho);
   const desconto = calcularDesconto(subtotal);
   document.getElementById("subtotal").textContent = formatarPreco(subtotal);
@@ -82,6 +105,11 @@ listaItens.addEventListener("click", function (e) {
     carrinho = carrinho.filter(function (i) { return i.id !== id; });
   }
   salvarStorage("carrinho", carrinho);
+  montarCarrinho();
+});
+
+document.getElementById("usar-pontos").addEventListener("change", function (e) {
+  usarPontos = e.target.checked;
   montarCarrinho();
 });
 
@@ -117,7 +145,8 @@ document.getElementById("finalizar").addEventListener("click", function (e) {
     desconto: desconto,
     total: subtotal - desconto,
     cupom: cupom ? cupom.codigo : null,
-    retirada: retirada
+    retirada: retirada,
+    pontosUsados: usarPontos ? regraFidelidade.pontosResgate : 0
   });
 
   if (!usuarioLogado()) {

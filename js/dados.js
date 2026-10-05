@@ -27,3 +27,16 @@ const promocoes = [
   { codigo: "SAOJOAO15", descricao: "15% de desconto na temporada junina", tipo: "percentual", valor: 15 },
   { codigo: "CAFE5", descricao: "R$ 5,00 de desconto", tipo: "fixo", valor: 5 }
 ];
+
+const regraFidelidade = {
+  pontosPorReal: 1,
+  pontosResgate: 100,
+  descontoResgate: 10
+};
+
+const campanhas = [
+  { titulo: "Temporada junina", descricao: "Use o cupom SAOJOAO15 e ganhe 15% de desconto no pedido.", segmentada: false },
+  { titulo: "Boas-vindas", descricao: "Primeira compra? Use o cupom BEMVINDO10 e ganhe 10% de desconto.", segmentada: false },
+  { titulo: "Café da manhã universitário", descricao: "Use o cupom CAFE5 no café da manhã completo.", segmentada: true, idadeMin: 18, idadeMax: 29 },
+  { titulo: "Manhã em família", descricao: "Use o cupom BEMVINDO10 no cuscuz recheado e leve a família.", segmentada: true, idadeMin: 30, idadeMax: 120 }
+];

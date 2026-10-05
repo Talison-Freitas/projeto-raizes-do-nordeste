@@ -53,6 +53,7 @@ function registrarPedido(metodo) {
       total: pedidoAtual.total,
       cupom: pedidoAtual.cupom,
       retirada: pedidoAtual.retirada,
+      pontosUsados: pedidoAtual.pontosUsados,
       historico: [],
       pagamento: null
     };
@@ -74,7 +75,7 @@ function salvarResultado(codigo, resultado) {
   if (resultado === "aprovado") {
     pedido.pagamento.status = "Aprovado";
     pedido.pagamento.transacao = "TX" + Date.now();
-    pedido.pontosGanhos = Math.floor(pedido.total);
+    pedido.pontosGanhos = Math.floor(pedido.total * regraFidelidade.pontosPorReal);
     registrarStatus(pedido, "Recebido");
   } else if (resultado === "recusado") {
     pedido.pagamento.status = "Recusado";
@@ -112,7 +113,7 @@ function concluirAprovado(pedido) {
     "Você ganhou " + pedido.pontosGanhos + " pontos no programa de fidelidade.";
   document.getElementById("link-acompanhar").href = "acompanhamento.html?codigo=" + pedido.codigo;
 
-  creditarPontos(pedido.pontosGanhos);
+  creditarPontos(pedido.pontosGanhos - pedido.pontosUsados);
   salvarStorage("carrinho", []);
   salvarStorage("cupom", null);
   salvarStorage("pedidoAtual", null);

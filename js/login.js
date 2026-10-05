@@ -20,19 +20,6 @@ function destino() {
   return "index.html";
 }
 
-function calcularIdade(nascimento) {
-  const data = new Date(nascimento);
-  const hoje = new Date();
-  let idade = hoje.getFullYear() - data.getFullYear();
-  const jaFezAniversario =
-    hoje.getMonth() > data.getMonth() ||
-    (hoje.getMonth() === data.getMonth() && hoje.getDate() >= data.getDate());
-  if (!jaFezAniversario) {
-    idade--;
-  }
-  return idade;
-}
-
 function emailValido(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
