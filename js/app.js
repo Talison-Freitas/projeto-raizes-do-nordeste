@@ -70,7 +70,9 @@ function montarAreaUsuario() {
   area.className = "area-usuario";
 
   if (usuario) {
-    area.innerHTML = "<span>Olá, " + usuario.nome.split(" ")[0] + '</span> <button class="sair" type="button">Sair</button>';
+    area.innerHTML =
+      '<a href="acompanhamento.html">Meus pedidos</a> · <span>Olá, ' + usuario.nome.split(" ")[0] +
+      '</span> <button class="sair" type="button">Sair</button>';
     area.querySelector("button").addEventListener("click", sair);
   } else {
     area.innerHTML = '<a href="login.html">Entrar</a>';

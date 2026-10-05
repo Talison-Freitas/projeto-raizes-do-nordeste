@@ -1,0 +1,152 @@
+.estreito {
+  max-width: 560px;
+}
+
+.lista-pedidos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-pedidos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.lista-pedidos h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.lista-pedidos p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+
+.situacao {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--palma);
+}
+
+.situacao.alerta {
+  color: var(--terracota);
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.detalhe-info {
+  margin: 0 0 1rem;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.mensagem-status {
+  background: #fff;
+  border-left: 4px solid var(--milho);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mensagem-status.alerta {
+  border-left-color: var(--terracota);
+}
+
+.linha-tempo {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.linha-tempo li {
+  position: relative;
+  padding: 0 0 1.25rem 2rem;
+  color: var(--cinza);
+}
+
+.linha-tempo li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--borda);
+}
+
+.linha-tempo li::after {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 1.2rem;
+  bottom: 0.1rem;
+  width: 2px;
+  background: var(--borda);
+}
+
+.linha-tempo li:last-child::after {
+  display: none;
+}
+
+.linha-tempo li.feito {
+  color: var(--cafe);
+}
+
+.linha-tempo li.feito::before {
+  background: var(--palma);
+}
+
+.linha-tempo li.atual {
+  color: var(--terracota);
+  font-weight: bold;
+}
+
+.linha-tempo li.atual::before {
+  background: var(--terracota);
+}
+
+.linha-tempo small {
+  display: block;
+  font-weight: normal;
+  color: var(--cinza);
+}
+
+.senha-retirada {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--terracota);
+}
+
+.itens-pedido {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.itens-pedido li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.detalhe-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.vazio {
+  color: var(--cinza);
+}
