@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel da cozinha - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cozinha.css">
+</head>
+<body>
+  <header class="topo" data-sem-usuario>
+    <span class="marca">Painel da cozinha</span>
+  </header>
+
+  <main class="conteudo">
+    <label for="filtro-unidade">Unidade</label>
+    <select id="filtro-unidade"></select>
+
+    <p class="vazio" id="vazio" hidden>Nenhum pedido em andamento nesta unidade.</p>
+    <ul class="fila" id="fila"></ul>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cozinha.js"></script>
+</body>
+</html>

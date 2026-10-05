@@ -75,7 +75,7 @@ function sair() {
 
 function montarAreaUsuario() {
   const topo = document.querySelector(".topo");
-  if (!topo || document.getElementById("form-login")) {
+  if (!topo || topo.dataset.semUsuario !== undefined || document.getElementById("form-login")) {
     return;
   }
   const usuario = usuarioLogado();
