@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidade - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/privacidade.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+    <a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+  </header>
+
+  <main class="conteudo estreito">
+    <h1>Privacidade e uso dos seus dados</h1>
+    <p>
+      Conhecer você ajuda a melhorar o atendimento, mas respeitar sua privacidade é obrigatório.
+      Esta página segue a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018).
+    </p>
+
+    <section class="bloco">
+      <h2>Quais dados coletamos e para quê</h2>
+      <ul>
+        <li><strong>Nome, e-mail e senha:</strong> criar sua conta e identificar seus pedidos.</li>
+        <li><strong>Data de nascimento:</strong> confirmar que você é maior de idade e, se você permitir, personalizar ofertas.</li>
+        <li><strong>Pedidos e pontos:</strong> registrar suas compras, acompanhar o status e calcular a fidelidade.</li>
+        <li><strong>Dados de pagamento:</strong> não coletamos. O pagamento é feito por um serviço externo, e recebemos só o resultado (aprovado ou recusado).</li>
+        <li><strong>Navegador:</strong> carrinho e sessão ficam guardados no seu próprio dispositivo.</li>
+      </ul>
+    </section>
+
+    <section class="bloco">
+      <h2>Seus direitos</h2>
+      <p>
+        Você pode consultar seus dados, mudar suas autorizações opcionais e excluir sua conta a qualquer momento, nesta página.
+        Ao excluir a conta, seus dados pessoais são apagados e os pedidos antigos ficam sem identificação (anonimizados).
+      </p>
+    </section>
+
+    <section class="bloco">
+      <h2>Cookies e armazenamento</h2>
+      <label class="opcao">
+        <input type="checkbox" id="cookies-estatisticas">
+        <span>Permitir medir o uso do site para melhorá-lo (opcional). O armazenamento essencial (carrinho e sessão) sempre funciona.</span>
+      </label>
+      <p class="mensagem" id="msg-cookies" role="status"></p>
+    </section>
+
+    <section class="bloco" id="area-conta" hidden>
+      <h2>Minhas autorizações</h2>
+      <p class="aviso">Conta: <span id="dados-conta"></span></p>
+
+      <label class="opcao">
+        <input type="checkbox" checked disabled>
+        <span>Uso dos dados para pedidos e fidelidade (obrigatório para ter a conta).</span>
+      </label>
+      <label class="opcao">
+        <input type="checkbox" id="cons-marketing">
+        <span>Receber promoções e campanhas.</span>
+      </label>
+      <label class="opcao">
+        <input type="checkbox" id="cons-perfil">
+        <span>Usar minha idade e frequência de compras para ofertas personalizadas.</span>
+      </label>
+      <p class="aviso" id="data-consentimento"></p>
+      <button class="botao" type="button" id="salvar-consentimentos">Salvar autorizações</button>
+      <p class="mensagem" id="msg-consentimentos" role="status"></p>
+
+      <h2 class="separado">Excluir minha conta</h2>
+      <p>Apaga seus dados pessoais e seus pontos. Essa ação não pode ser desfeita.</p>
+      <button class="botao perigo" type="button" id="excluir">Excluir minha conta</button>
+      <div id="confirmar-exclusao" hidden>
+        <p><strong>Tem certeza?</strong> Todos os seus dados e pontos serão apagados.</p>
+        <button class="botao perigo" type="button" id="confirmar">Sim, excluir</button>
+        <button class="botao secundario" type="button" id="cancelar">Cancelar</button>
+      </div>
+    </section>
+
+    <p id="aviso-login" class="aviso" hidden>
+      Para ver e alterar suas autorizações ou excluir sua conta, <a href="login.html?voltar=privacidade.html">entre na sua conta</a>.
+    </p>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/privacidade.js"></script>
+</body>
+</html>

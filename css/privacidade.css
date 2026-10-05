@@ -1,0 +1,65 @@
+.estreito {
+  max-width: 640px;
+}
+
+.bloco {
+  margin: 1.5rem 0;
+}
+
+.bloco h2 {
+  font-size: 1.1rem;
+}
+
+.bloco ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.bloco li {
+  margin-bottom: 0.4rem;
+}
+
+.separado {
+  margin-top: 2rem;
+}
+
+.opcao {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin: 0.6rem 0;
+}
+
+.opcao input {
+  margin-top: 0.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.aviso {
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
+.mensagem {
+  margin: 0.5rem 0 0;
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--palma);
+}
+
+.botao.perigo {
+  background: #8f1d1d;
+}
+
+.botao.secundario {
+  background: none;
+  color: var(--terracota);
+  border: 1px solid var(--terracota);
+}
+
+#confirmar-exclusao .botao,
+#excluir {
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
