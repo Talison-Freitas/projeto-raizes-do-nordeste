@@ -12,12 +12,12 @@ function mostrarAba(cadastro) {
   abaCadastro.className = cadastro ? "ativa" : "";
 }
 
-function destino() {
+function destino(perfil) {
   const voltar = new URLSearchParams(window.location.search).get("voltar");
   if (voltar && /^[a-z]+\.html$/.test(voltar)) {
     return voltar;
   }
-  return "index.html";
+  return perfil === "cozinha" ? "cozinha.html" : "index.html";
 }
 
 function emailValido(email) {
@@ -41,7 +41,7 @@ formLogin.addEventListener("submit", function (e) {
     return;
   }
   salvarStorage("usuarioLogado", usuario.email);
-  window.location.href = destino();
+  window.location.href = destino(usuario.perfil);
 });
 
 formCadastro.addEventListener("submit", function (e) {
@@ -97,7 +97,7 @@ formCadastro.addEventListener("submit", function (e) {
   });
   salvarStorage("usuarios", usuarios);
   salvarStorage("usuarioLogado", email);
-  window.location.href = destino();
+  window.location.href = destino("cliente");
 });
 
 if (new URLSearchParams(window.location.search).get("aba") === "cadastro") {

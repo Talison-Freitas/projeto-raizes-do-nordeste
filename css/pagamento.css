@@ -1,7 +1,3 @@
-.estreito {
-  max-width: 480px;
-}
-
 .bloco {
   margin-bottom: 1.5rem;
 }
@@ -77,16 +73,6 @@ form .botao {
   display: block;
   width: 100%;
   margin-top: 0.75rem;
-}
-
-.botao.secundario {
-  background: none;
-  color: var(--terracota);
-  border: 1px solid var(--terracota);
-}
-
-.botao.secundario:hover {
-  background: var(--borda);
 }
 
 .ok {

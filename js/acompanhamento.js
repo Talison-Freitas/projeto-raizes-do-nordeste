@@ -17,16 +17,12 @@ if (!usuario) {
   window.location.href = "login.html?voltar=acompanhamento.html";
 }
 
-function formatarData(iso) {
-  return new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
-}
-
 function pedidoComAlerta(status) {
   return status === "Pagamento recusado" || status === "Cancelado" || status === "Aguardando pagamento";
 }
 
 function nomeUnidade(id) {
-  return unidades.find(function (u) { return u.id === id; }).nome;
+  return buscarUnidade(id).nome;
 }
 
 function meusPedidos() {
@@ -96,7 +92,7 @@ function montarDetalhe(pedido) {
 
   html += "<h2>Itens</h2>" + '<ul class="itens-pedido">';
   pedido.itens.forEach(function (item) {
-    const produto = produtos.find(function (p) { return p.id === item.id; });
+    const produto = buscarProduto(item.id);
     html += "<li><span>" + item.qtd + "x " + produto.nome + "</span><span>" +
       formatarPreco(produto.preco * item.qtd) + "</span></li>";
   });

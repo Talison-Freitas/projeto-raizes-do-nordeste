@@ -11,9 +11,20 @@ function formatarPreco(valor) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
-function unidadeAtual() {
-  const id = lerStorage("unidadeId", null);
+function formatarData(iso) {
+  return new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
+}
+
+function buscarProduto(id) {
+  return produtos.find(function (p) { return p.id === id; });
+}
+
+function buscarUnidade(id) {
   return unidades.find(function (u) { return u.id === id; });
+}
+
+function unidadeAtual() {
+  return buscarUnidade(lerStorage("unidadeId", null));
 }
 
 function escolherUnidade(id) {
@@ -131,9 +142,11 @@ function mostrarBannerLgpd() {
         data: new Date().toISOString()
       });
       banner.remove();
+      document.body.style.paddingBottom = "";
     }
   });
   document.body.appendChild(banner);
+  document.body.style.paddingBottom = banner.offsetHeight + "px";
 }
 
 atualizarContador();

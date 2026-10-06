@@ -134,6 +134,10 @@ button {
   margin: 0 auto;
 }
 
+.estreito {
+  max-width: 560px;
+}
+
 .botao {
   display: inline-block;
   background: var(--terracota);
@@ -147,6 +151,16 @@ button {
 
 .botao:hover {
   background: var(--terracota-escuro);
+}
+
+.botao.secundario {
+  background: none;
+  color: var(--terracota);
+  border: 1px solid var(--terracota);
+}
+
+.botao.secundario:hover {
+  background: var(--borda);
 }
 
 .botao:focus-visible,

@@ -24,8 +24,7 @@ function montarFila() {
   emAndamento.forEach(function (p) {
     const etapa = proximo[p.status];
     const itens = p.itens.map(function (item) {
-      const produto = produtos.find(function (prod) { return prod.id === item.id; });
-      return "<li>" + item.qtd + "x " + produto.nome + "</li>";
+      return "<li>" + item.qtd + "x " + buscarProduto(item.id).nome + "</li>";
     }).join("");
 
     const li = document.createElement("li");

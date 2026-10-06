@@ -2,10 +2,6 @@ const usuario = usuarioLogado();
 const caixaCookies = document.getElementById("cookies-estatisticas");
 const msgCookies = document.getElementById("msg-cookies");
 
-function formatarData(iso) {
-  return new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
-}
-
 const cookies = lerStorage("consentimentoCookies", null);
 caixaCookies.checked = cookies ? cookies.estatisticas : false;
 

@@ -16,13 +16,13 @@ function mostrarEtapa(nome) {
 }
 
 function montarResumo() {
-  const unidade = unidades.find(function (u) { return u.id === pedidoAtual.unidadeId; });
+  const unidade = buscarUnidade(pedidoAtual.unidadeId);
   document.getElementById("info-pedido").textContent =
     unidade.nome + " - " + unidade.cidade + " · " + pedidoAtual.retirada;
 
   const lista = document.getElementById("resumo-itens");
   pedidoAtual.itens.forEach(function (item) {
-    const produto = produtos.find(function (p) { return p.id === item.id; });
+    const produto = buscarProduto(item.id);
     const li = document.createElement("li");
     li.innerHTML = "<span>" + item.qtd + "x " + produto.nome + "</span><span>" +
       formatarPreco(produto.preco * item.qtd) + "</span>";

@@ -15,8 +15,7 @@ let usarPontos = false;
 function calcularSubtotal(carrinho) {
   let subtotal = 0;
   carrinho.forEach(function (item) {
-    const produto = produtos.find(function (p) { return p.id === item.id; });
-    subtotal += produto.preco * item.qtd;
+    subtotal += buscarProduto(item.id).preco * item.qtd;
   });
   return subtotal;
 }
@@ -60,7 +59,7 @@ function montarCarrinho() {
   areaCarrinho.hidden = carrinho.length === 0;
 
   carrinho.forEach(function (item) {
-    const produto = produtos.find(function (p) { return p.id === item.id; });
+    const produto = buscarProduto(item.id);
 
     const li = document.createElement("li");
     li.className = "item";
