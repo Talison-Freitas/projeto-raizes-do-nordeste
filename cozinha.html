@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="css/cozinha.css">
 </head>
 <body>
-  <header class="topo" data-sem-usuario>
+  <header class="topo">
     <span class="marca">Painel da cozinha</span>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" id="painel" hidden>
     <label for="filtro-unidade">Unidade</label>
     <select id="filtro-unidade"></select>
 
     <p class="vazio" id="vazio" hidden>Nenhum pedido em andamento nesta unidade.</p>
     <ul class="fila" id="fila"></ul>
+  </main>
+
+  <main class="conteudo" id="restrito" hidden>
+    <h1>Acesso restrito</h1>
+    <p>Esta área é exclusiva da equipe da loja. <a href="index.html">Voltar ao início</a></p>
   </main>
 
   <script src="js/dados.js"></script>

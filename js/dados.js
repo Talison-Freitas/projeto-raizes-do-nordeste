@@ -28,6 +28,16 @@ const promocoes = [
   { codigo: "CAFE5", descricao: "R$ 5,00 de desconto", tipo: "fixo", valor: 5 }
 ];
 
+const contaCozinha = {
+  nome: "Equipe Cozinha",
+  email: "cozinha@raizesdonordeste.com.br",
+  senha: "cozinha123",
+  nascimento: "1990-01-01",
+  pontos: 0,
+  perfil: "cozinha",
+  consentimentos: { termos: true, marketing: false, perfil: false, data: "2026-01-01T00:00:00.000Z" }
+};
+
 const regraFidelidade = {
   pontosPorReal: 1,
   pontosResgate: 100,

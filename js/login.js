@@ -87,6 +87,7 @@ formCadastro.addEventListener("submit", function (e) {
     senha: senha,
     nascimento: nascimento,
     pontos: 0,
+    perfil: "cliente",
     consentimentos: {
       termos: true,
       marketing: document.getElementById("cons-marketing").checked,

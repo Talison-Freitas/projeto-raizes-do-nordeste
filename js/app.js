@@ -60,6 +60,15 @@ function calcularIdade(nascimento) {
   return idade;
 }
 
+function garantirContaCozinha() {
+  const usuarios = lerStorage("usuarios", []);
+  const existe = usuarios.some(function (u) { return u.email === contaCozinha.email; });
+  if (!existe) {
+    usuarios.push(contaCozinha);
+    salvarStorage("usuarios", usuarios);
+  }
+}
+
 function usuarioLogado() {
   const email = lerStorage("usuarioLogado", null);
   if (!email) {
@@ -75,7 +84,7 @@ function sair() {
 
 function montarAreaUsuario() {
   const topo = document.querySelector(".topo");
-  if (!topo || topo.dataset.semUsuario !== undefined || document.getElementById("form-login")) {
+  if (!topo || document.getElementById("form-login")) {
     return;
   }
   const usuario = usuarioLogado();
@@ -83,8 +92,11 @@ function montarAreaUsuario() {
   area.className = "area-usuario";
 
   if (usuario) {
+    const links = usuario.perfil === "cozinha"
+      ? '<a href="cozinha.html">Painel da cozinha</a>'
+      : '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a>';
     area.innerHTML =
-      '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a> · <span>Olá, ' + usuario.nome.split(" ")[0] +
+      links + " · <span>Olá, " + usuario.nome.split(" ")[0] +
       '</span> <button class="sair" type="button">Sair</button>';
     area.querySelector("button").addEventListener("click", sair);
   } else {
@@ -125,5 +137,6 @@ function mostrarBannerLgpd() {
 }
 
 atualizarContador();
+garantirContaCozinha();
 montarAreaUsuario();
 mostrarBannerLgpd();
