@@ -46,6 +46,7 @@ function montarProdutos() {
     item.className = "produto";
     const selo = p.sazonal ? ' <span class="selo">Junino</span>' : "";
     item.innerHTML =
+      '<img src="' + p.imagem + '" alt="Foto de ' + p.nome + '" width="120" height="120" loading="lazy">' +
       "<div>" +
       "<h2>" + p.nome + selo + "</h2>" +
       "<p>" + p.descricao + "</p>" +
