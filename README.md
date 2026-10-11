@@ -1,8 +1,7 @@
 # Raízes do Nordeste - Front-end
 
-Interface web da rede de lanchonetes Raízes do Nordeste, desenvolvida como trabalho da trilha de Front-end (Opção B: codificação).
+Interface web da rede de lanchonetes Raízes do Nordeste, desenvolvida como trabalho da trilha de Front-end.
 
-- Repositório: https://github.com/Talison-Freitas/projeto-raizes-do-nordeste
 - Publicação: https://talison-freitas.github.io/projeto-raizes-do-nordeste/
 
 ## Tecnologias
@@ -26,6 +25,7 @@ Basta abrir o `index.html` no navegador ou acessar o link da publicação. Não 
 | `fidelidade.html` | Pontos, promoções e campanhas |
 | `privacidade.html` | Política de privacidade, consentimentos e exclusão da conta |
 | `cozinha.html` | Painel da cozinha, que atualiza o status dos pedidos |
+| `gerente.html` | Painel do gerente: vendas por unidade, produtos mais vendidos e auditoria de descontos |
 
 ## Roteiro para testar
 
@@ -37,14 +37,16 @@ Basta abrir o `index.html` no navegador ou acessar o link da publicação. Não 
 6. Em `fidelidade.html`, veja os pontos ganhos. Com 100 pontos, o desconto pode ser usado no carrinho.
 7. Em `privacidade.html`, altere os consentimentos ou exclua a conta.
 
-## Conta da cozinha
+## Contas internas
 
-O painel da cozinha é restrito à equipe da loja. Para acessá-lo, entre em `login.html` com a conta de teste:
+Os painéis da cozinha e do gerente são restritos. Para acessá-los, entre em `login.html` com uma das contas de teste:
 
-- E-mail: `cozinha@raizesdonordeste.com.br`
-- Senha: `cozinha123`
+| Painel | E-mail | Senha |
+|---|---|---|
+| Cozinha | `cozinha@raizesdonordeste.com.br` | `cozinha123` |
+| Gerente | `gerente@raizesdonordeste.com.br` | `gerente123` |
 
-Clientes comuns que tentam abrir `cozinha.html` veem uma mensagem de acesso restrito.
+Quem tenta abrir um painel sem o perfil correto vê uma mensagem de acesso restrito. O painel do gerente soma os pedidos aprovados feitos no navegador, então faça alguns pedidos antes de consultá-lo.
 
 ## Observações
 

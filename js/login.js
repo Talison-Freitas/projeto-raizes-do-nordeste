@@ -17,7 +17,8 @@ function destino(perfil) {
   if (voltar && /^[a-z]+\.html$/.test(voltar)) {
     return voltar;
   }
-  return perfil === "cozinha" ? "cozinha.html" : "index.html";
+  const inicio = { cozinha: "cozinha.html", gerente: "gerente.html" };
+  return inicio[perfil] || "index.html";
 }
 
 function emailValido(email) {

@@ -1,0 +1,55 @@
+.totais {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.totais p {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--milho);
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.totais strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--cafe);
+}
+
+.bloco {
+  margin-bottom: 2rem;
+}
+
+.bloco h2 {
+  font-size: 1.1rem;
+}
+
+.tabela {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--borda);
+  white-space: nowrap;
+}
+
+th {
+  color: var(--cinza);
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .totais {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

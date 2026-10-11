@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel do gerente - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/gerente.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+  </header>
+
+  <main class="conteudo" id="painel" hidden>
+    <h1>Painel do gerente</h1>
+
+    <section class="totais">
+      <p>Faturamento <strong id="faturamento"></strong></p>
+      <p>Descontos concedidos <strong id="descontos"></strong></p>
+      <p>Pagamentos recusados <strong id="recusados"></strong></p>
+    </section>
+
+    <section class="bloco">
+      <h2>Vendas por unidade</h2>
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr><th>Unidade</th><th>Pedidos</th><th>Total</th></tr>
+          </thead>
+          <tbody id="tabela-unidades"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bloco">
+      <h2>Produtos mais vendidos</h2>
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr><th>Produto</th><th>Quantidade</th></tr>
+          </thead>
+          <tbody id="tabela-produtos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bloco">
+      <h2>Auditoria de descontos</h2>
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr><th>Pedido</th><th>Data</th><th>Cliente</th><th>Origem</th><th>Desconto</th></tr>
+          </thead>
+          <tbody id="tabela-descontos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <main class="conteudo" id="restrito" hidden>
+    <h1>Acesso restrito</h1>
+    <p>Esta área é exclusiva da gerência. <a href="index.html">Voltar ao início</a></p>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/gerente.js"></script>
+</body>
+</html>

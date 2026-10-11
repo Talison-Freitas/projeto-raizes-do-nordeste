@@ -38,6 +38,16 @@ const contaCozinha = {
   consentimentos: { termos: true, marketing: false, perfil: false, data: "2026-01-01T00:00:00.000Z" }
 };
 
+const contaGerente = {
+  nome: "Gerência Matriz",
+  email: "gerente@raizesdonordeste.com.br",
+  senha: "gerente123",
+  nascimento: "1985-01-01",
+  pontos: 0,
+  perfil: "gerente",
+  consentimentos: { termos: true, marketing: false, perfil: false, data: "2026-01-01T00:00:00.000Z" }
+};
+
 const regraFidelidade = {
   pontosPorReal: 1,
   pontosResgate: 100,

@@ -71,13 +71,14 @@ function calcularIdade(nascimento) {
   return idade;
 }
 
-function garantirContaCozinha() {
+function garantirContasInternas() {
   const usuarios = lerStorage("usuarios", []);
-  const existe = usuarios.some(function (u) { return u.email === contaCozinha.email; });
-  if (!existe) {
-    usuarios.push(contaCozinha);
-    salvarStorage("usuarios", usuarios);
-  }
+  [contaCozinha, contaGerente].forEach(function (conta) {
+    if (!usuarios.some(function (u) { return u.email === conta.email; })) {
+      usuarios.push(conta);
+    }
+  });
+  salvarStorage("usuarios", usuarios);
 }
 
 function usuarioLogado() {
@@ -103,9 +104,11 @@ function montarAreaUsuario() {
   area.className = "area-usuario";
 
   if (usuario) {
-    const links = usuario.perfil === "cozinha"
-      ? '<a href="cozinha.html">Painel da cozinha</a>'
-      : '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a>';
+    const painel = {
+      cozinha: '<a href="cozinha.html">Painel da cozinha</a>',
+      gerente: '<a href="gerente.html">Painel do gerente</a>'
+    }[usuario.perfil];
+    const links = painel || '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a>';
     area.innerHTML =
       links + " · <span>Olá, " + usuario.nome.split(" ")[0] +
       '</span> <button class="sair" type="button">Sair</button>';
@@ -150,6 +153,6 @@ function mostrarBannerLgpd() {
 }
 
 atualizarContador();
-garantirContaCozinha();
+garantirContasInternas();
 montarAreaUsuario();
 mostrarBannerLgpd();
