@@ -53,21 +53,23 @@ button {
   text-decoration: none;
 }
 
+.topo a:hover,
+.sair:hover {
+  color: var(--milho);
+}
+
 .topo {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
+  font-size: 1.1rem;
 }
 
 .topo .marca {
   font-family: "Bree Serif", Georgia, serif;
   font-size: 1.5rem;
   margin-right: auto;
-}
-
-.area-usuario {
-  font-size: 1.1rem;
 }
 
 .sair {
