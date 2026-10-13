@@ -110,13 +110,20 @@ function montarAreaUsuario() {
     }[usuario.perfil];
     const links = painel || '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a> · <a href="conta.html">Minha conta</a>';
     area.innerHTML =
-      links + " · <span>Olá, " + usuario.nome.split(" ")[0] +
+      '<a href="index.html">Unidades</a> · ' + links + " · <span>Olá, " + usuario.nome.split(" ")[0] +
       '</span> <button class="sair" type="button">Sair</button>';
     area.querySelector("button").addEventListener("click", sair);
   } else {
-    area.innerHTML = '<a href="login.html">Entrar</a>';
+    area.innerHTML = '<a href="index.html">Unidades</a> · <a href="login.html">Entrar</a>';
   }
   topo.appendChild(area);
+}
+
+function montarRodape() {
+  const rodape = document.createElement("footer");
+  rodape.className = "rodape";
+  rodape.textContent = "Copyright © 2026 Raízes do Nordeste. Todos os direitos reservados.";
+  document.body.appendChild(rodape);
 }
 
 function mostrarBannerLgpd() {
@@ -155,4 +162,5 @@ function mostrarBannerLgpd() {
 atualizarContador();
 garantirContasInternas();
 montarAreaUsuario();
+montarRodape();
 mostrarBannerLgpd();

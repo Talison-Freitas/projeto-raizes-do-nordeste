@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;700&display=swap");
+
 :root {
   --terracota: #b5472a;
   --terracota-escuro: #8f3820;
@@ -15,14 +17,19 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
   background: var(--creme);
   color: var(--cafe);
   line-height: 1.4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
   margin: 0 0 0.5rem;
+  font-family: "Bree Serif", Georgia, serif;
+  font-weight: normal;
 }
 
 a {
@@ -54,13 +61,13 @@ button {
 }
 
 .topo .marca {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-family: "Bree Serif", Georgia, serif;
+  font-size: 1.5rem;
   margin-right: auto;
 }
 
 .area-usuario {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .sair {
@@ -69,6 +76,15 @@ button {
   color: #fff;
   text-decoration: underline;
   padding: 0;
+}
+
+.rodape {
+  margin-top: auto;
+  padding: 1rem;
+  background: var(--cafe);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .banner-lgpd {
@@ -129,6 +145,7 @@ button {
 }
 
 .conteudo {
+  width: 100%;
   padding: 1rem;
   max-width: 960px;
   margin: 0 auto;
