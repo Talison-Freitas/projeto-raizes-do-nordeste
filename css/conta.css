@@ -12,6 +12,11 @@
   font-weight: bold;
 }
 
+.aviso {
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
 .atalho {
   margin: 0 0 1.5rem;
 }
