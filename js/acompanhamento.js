@@ -9,8 +9,7 @@ const mensagens = {
   "Recebido": "A loja recebeu seu pedido e logo ele vai para a cozinha.",
   "Em preparo": "A cozinha está preparando seu pedido.",
   "Pronto": "Seu pedido está pronto. Retire no local informando a senha abaixo.",
-  "Retirado": "Pedido retirado. Obrigado e volte sempre!",
-  "Cancelado": "Este pedido foi cancelado."
+  "Retirado": "Pedido retirado. Obrigado e volte sempre!"
 };
 
 if (!usuario) {
@@ -18,7 +17,7 @@ if (!usuario) {
 }
 
 function pedidoComAlerta(status) {
-  return status === "Pagamento recusado" || status === "Cancelado" || status === "Aguardando pagamento";
+  return status === "Pagamento recusado" || status === "Aguardando pagamento";
 }
 
 function nomeUnidade(id) {
