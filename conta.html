@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha conta - Raízes do Nordeste</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/conta.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">Raízes do Nordeste</a>
+    <a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+  </header>
+
+  <main class="conteudo estreito">
+    <h1>Minha conta</h1>
+
+    <dl class="dados">
+      <dt>Nome</dt>
+      <dd id="conta-nome"></dd>
+      <dt>E-mail</dt>
+      <dd id="conta-email"></dd>
+      <dt>Data de nascimento</dt>
+      <dd id="conta-nascimento"></dd>
+      <dt>Pontos de fidelidade</dt>
+      <dd id="conta-pontos"></dd>
+    </dl>
+
+    <p class="atalho"><a href="privacidade.html">Privacidade, autorizações e exclusão da conta</a></p>
+
+    <button class="botao secundario" type="button" id="sair-conta">Sair</button>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/conta.js"></script>
+</body>
+</html>

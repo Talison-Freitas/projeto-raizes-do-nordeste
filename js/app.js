@@ -108,7 +108,7 @@ function montarAreaUsuario() {
       cozinha: '<a href="cozinha.html">Painel da cozinha</a>',
       gerente: '<a href="gerente.html">Painel do gerente</a>'
     }[usuario.perfil];
-    const links = painel || '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a>';
+    const links = painel || '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a> · <a href="conta.html">Minha conta</a>';
     area.innerHTML =
       links + " · <span>Olá, " + usuario.nome.split(" ")[0] +
       '</span> <button class="sair" type="button">Sair</button>';
