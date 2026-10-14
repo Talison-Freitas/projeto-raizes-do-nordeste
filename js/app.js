@@ -152,11 +152,9 @@ function mostrarBannerLgpd() {
         data: new Date().toISOString()
       });
       banner.remove();
-      document.body.style.paddingBottom = "";
     }
   });
   document.body.appendChild(banner);
-  document.body.style.paddingBottom = banner.offsetHeight + "px";
 }
 
 atualizarContador();
