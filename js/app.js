@@ -108,13 +108,13 @@ function montarAreaUsuario() {
       cozinha: '<a href="cozinha.html">Painel da cozinha</a>',
       gerente: '<a href="gerente.html">Painel do gerente</a>'
     }[usuario.perfil];
-    const links = painel || '<a href="fidelidade.html">Fidelidade</a> · <a href="acompanhamento.html">Meus pedidos</a> · <a href="conta.html">Minha conta</a>';
+    const links = painel || '<a href="fidelidade.html">Fidelidade</a><a href="acompanhamento.html">Meus pedidos</a><a href="conta.html">Minha conta</a>';
     area.innerHTML =
-      '<a href="index.html">Unidades</a> · ' + links + " ·" +
-      ' <button class="sair" type="button">Sair</button>';
+      '<a href="index.html">Unidades</a>' + links +
+      '<button class="sair" type="button">Sair</button>';
     area.querySelector("button").addEventListener("click", sair);
   } else {
-    area.innerHTML = '<a href="index.html">Unidades</a> · <a href="login.html">Entrar</a>';
+    area.innerHTML = '<a href="index.html">Unidades</a><a href="login.html">Entrar</a>';
   }
   topo.appendChild(area);
 }

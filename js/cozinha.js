@@ -30,8 +30,8 @@ function montarFila() {
     const li = document.createElement("li");
     li.className = "pedido " + etapa.classe;
     li.innerHTML =
-      "<h2>Pedido #" + p.codigo + " · " + p.status + "</h2>" +
-      '<p class="detalhe">' + p.retirada + " · feito às " + formatarHora(p.historico[0].data) + "</p>" +
+      "<h2>Pedido #" + p.codigo + " - " + p.status + "</h2>" +
+      '<p class="detalhe">' + p.retirada + ", feito às " + formatarHora(p.historico[0].data) + "</p>" +
       "<ul>" + itens + "</ul>" +
       '<button class="botao" data-codigo="' + p.codigo + '">' + etapa.texto + "</button>";
     fila.appendChild(li);

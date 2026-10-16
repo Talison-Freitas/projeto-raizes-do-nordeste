@@ -41,7 +41,7 @@ function montarLista() {
       html +=
         "<li><div>" +
         "<h2>Pedido #" + p.codigo + "</h2>" +
-        "<p>" + nomeUnidade(p.unidadeId) + " · " + formatarData(p.historico[0].data) + "</p>" +
+        "<p>" + nomeUnidade(p.unidadeId) + " - " + formatarData(p.historico[0].data) + "</p>" +
         "<p>" + formatarPreco(p.total) + "</p>" +
         '<span class="' + classe + '">' + p.status + "</span>" +
         "</div>" +
@@ -80,7 +80,7 @@ function montarDetalhe(pedido) {
   let html =
     '<a class="voltar" href="acompanhamento.html">&larr; Meus pedidos</a>' +
     "<h1>Pedido #" + pedido.codigo + "</h1>" +
-    '<p class="detalhe-info">' + nomeUnidade(pedido.unidadeId) + " · " + pedido.retirada + "</p>" +
+    '<p class="detalhe-info">' + nomeUnidade(pedido.unidadeId) + " - " + pedido.retirada + "</p>" +
     '<p class="mensagem-status' + alerta + '" role="status">' + mensagens[pedido.status] + "</p>";
 
   html += montarLinhaTempo(pedido);
@@ -99,7 +99,7 @@ function montarDetalhe(pedido) {
     '<p class="detalhe-total"><span>Total</span><span>' + formatarPreco(pedido.total) + "</span></p>";
 
   if (pedido.pagamento) {
-    html += '<p class="detalhe-info">Pagamento: ' + pedido.pagamento.metodo + " · " + pedido.pagamento.status + "</p>";
+    html += '<p class="detalhe-info">Pagamento: ' + pedido.pagamento.metodo + " - " + pedido.pagamento.status + "</p>";
   }
   conteudo.innerHTML = html;
 }

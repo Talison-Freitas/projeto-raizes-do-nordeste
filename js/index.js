@@ -5,7 +5,7 @@ unidades.forEach(function (u) {
   item.className = "unidade";
   item.innerHTML =
     "<h2>" + u.nome + "</h2>" +
-    "<p>" + u.cidade + " · " + u.horario + " · cozinha " + u.cozinha + "</p>" +
+    "<p>" + u.cidade + ", " + u.horario + ", cozinha " + u.cozinha + "</p>" +
     '<a class="botao" href="cardapio.html" data-id="' + u.id + '">Ver cardápio</a>';
   lista.appendChild(item);
 });

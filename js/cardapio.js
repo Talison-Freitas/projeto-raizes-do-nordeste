@@ -10,7 +10,7 @@ let categoriaAtiva = "Todos";
 
 document.getElementById("nome-unidade").textContent = unidade.nome;
 document.getElementById("info-unidade").textContent =
-  unidade.cidade + " · cozinha " + unidade.cozinha + " · " + unidade.horario;
+  unidade.cidade + ", cozinha " + unidade.cozinha + ", " + unidade.horario;
 
 const produtosDaUnidade = produtos.filter(function (p) {
   return p.unidades.includes(unidade.id);

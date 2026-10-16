@@ -73,6 +73,13 @@ button {
   margin-right: auto;
 }
 
+.area-usuario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+}
+
 .sair {
   background: none;
   border: 0;
